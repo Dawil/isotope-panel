@@ -1,1 +1,12 @@
 @import "compass_twitter_bootstrap";
+
+#post-container {
+	width: 750px;
+}
+
+.post {
+	width: 240px;
+	padding: 5px;
+	background-color: rgb(187, 187, 187);
+	border-radius: 15px;
+}
