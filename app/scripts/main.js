@@ -54,7 +54,7 @@
   };
 
   tagToHtml = function(tag) {
-    return "<li><a href=\"#\" data-filter=\".tag-id-" + tag.id + "\">" + tag.title + "</a></li>";
+    return "<li><a href=\"#\" data-filter=\".tag-id-" + tag.id + "\">" + tag.title + "</a> (" + tag.post_count + ")</li>";
   };
 
   postToHtml = function(post) {

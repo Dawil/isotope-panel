@@ -31,7 +31,7 @@ addClickHandler = (button) ->
 
 tagToHtml = (tag) ->
 	"""
-	<li><a href="#" data-filter=".tag-id-#{tag.id}">#{tag.title}</a></li>
+	<li><a href="#" data-filter=".tag-id-#{tag.id}">#{tag.title}</a> (#{tag.post_count})</li>
 	"""
 
 postToHtml = (post) ->
