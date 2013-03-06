@@ -1,7 +1,7 @@
 $ ->
 	posts = []
 	postsUrl = "http://lit-shore-9728.herokuapp.com/api/get_recent_posts/?callback=?"
-	$.getJSON postsUrl, {},
+	$.getJSON postsUrl, { count: 50 },
 		(result) ->
 			container = $ "#post-container"
 			posts = result.posts

@@ -5,7 +5,9 @@
     var posts, postsUrl, tags, tagsUrl;
     posts = [];
     postsUrl = "http://lit-shore-9728.herokuapp.com/api/get_recent_posts/?callback=?";
-    $.getJSON(postsUrl, {}, function(result) {
+    $.getJSON(postsUrl, {
+      count: 50
+    }, function(result) {
       var container, post, postsHtml, _i, _len;
       container = $("#post-container");
       posts = result.posts;
