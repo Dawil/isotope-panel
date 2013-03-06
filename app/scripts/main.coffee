@@ -18,7 +18,7 @@ $ ->
 		(result) ->
 			tags = result.tags
 			container = $ "#filters"
-			tagButtons = addClickHandler $(tagToHtml tag) for tag in tags
+			tagButtons = (addClickHandler $(tagToHtml tag) for tag in tags)
 			container.append tagButtons
 			$("#filters a").click ->
 				selector = $(this).attr('data-filter')

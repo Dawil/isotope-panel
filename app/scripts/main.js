@@ -23,13 +23,18 @@
     tags = [];
     tagsUrl = "http://lit-shore-9728.herokuapp.com/api/get_tag_index/?callback=?";
     return $.getJSON(tagsUrl, {}, function(result) {
-      var container, tag, tagButtons, _i, _len;
+      var container, tag, tagButtons;
       tags = result.tags;
       container = $("#filters");
-      for (_i = 0, _len = tags.length; _i < _len; _i++) {
-        tag = tags[_i];
-        tagButtons = addClickHandler($(tagToHtml(tag)));
-      }
+      tagButtons = (function() {
+        var _i, _len, _results;
+        _results = [];
+        for (_i = 0, _len = tags.length; _i < _len; _i++) {
+          tag = tags[_i];
+          _results.push(addClickHandler($(tagToHtml(tag))));
+        }
+        return _results;
+      })();
       container.append(tagButtons);
       return $("#filters a").click(function() {
         var selector;
